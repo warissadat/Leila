@@ -1,0 +1,76 @@
+import 'package:flutter/material.dart';
+
+class AppColors {
+  static const primary = Color(0xFF6A1B9A); // بنفش پررنگ
+  static const accent = Color(0xFFFFC107); // زرد کهربایی
+  static const backgroundLight = Color(0xFFF5F5F5);
+  static const backgroundDark = Color(0xFF121212);
+  static const textLight = Color(0xFF000000);
+  static const textDark = Color(0xFFFFFFFF);
+}
+
+class AppTheme {
+  static ThemeData lightTheme = ThemeData(
+    brightness: Brightness.light,
+    primaryColor: AppColors.primary,
+    scaffoldBackgroundColor: AppColors.backgroundLight,
+    fontFamily: 'Nunito',
+    appBarTheme: const AppBarTheme(
+      backgroundColor: AppColors.primary,
+      foregroundColor: Colors.white,
+      elevation: 2,
+    ),
+    textTheme: const TextTheme(
+      headlineLarge: TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        color: AppColors.textLight,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 16,
+        color: AppColors.textLight,
+      ),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: AppColors.primary,
+        foregroundColor: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),
+    ),
+  );
+
+  static ThemeData darkTheme = ThemeData(
+    brightness: Brightness.dark,
+    primaryColor: AppColors.primary,
+    scaffoldBackgroundColor: AppColors.backgroundDark,
+    fontFamily: 'Nunito',
+    appBarTheme: const AppBarTheme(
+      backgroundColor: AppColors.primary,
+      foregroundColor: Colors.white,
+      elevation: 2,
+    ),
+    textTheme: const TextTheme(
+      headlineLarge: TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        color: AppColors.textDark,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 16,
+        color: AppColors.textDark,
+      ),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: AppColors.accent,
+        foregroundColor: Colors.black,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),
+    ),
+  );
+}

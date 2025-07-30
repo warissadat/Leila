@@ -1,0 +1,6 @@
+class Validators {
+  static bool isValidPhoneNumber(String phone) {
+    final regex = RegExp(r'^\+?[0-9]{10,14}$');
+    return regex.hasMatch(phone);
+  }
+}
